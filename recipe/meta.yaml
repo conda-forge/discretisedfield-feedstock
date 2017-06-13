@@ -27,12 +27,17 @@ requirements:
     - matplotlib
     - pyvtk
     - joommfutil
+    - pytest
+    - hypothesis
 
 test:
   imports:
     - discretisedfield
     - discretisedfield.util
     - discretisedfield.mesh
+    
+  commands:
+    - python -c "import discretisedfield; discretisedfield.test()"
 
 about:
   home: http://joommf.github.io/
