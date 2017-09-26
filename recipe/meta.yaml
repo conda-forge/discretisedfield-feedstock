@@ -1,6 +1,6 @@
-{% set version = "0.7.2" %}
+{% set version = "0.7.4" %}
 {% set name = "discretisedfield" %}
-{% set sha256 = "e52c78f72f181edd328872e541564e0a4bee17d73d575111360574032fdf992c" %}
+{% set sha256 = "507aadba50f7d0187da332ad2a4b0672b0571949f23b4605db6f7d3431ecbb31" %}
 
 package:
   name: {{ name | lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   skip: True  # [py27]
-  number: 1
+  number: 0
   script: pip install --no-deps .
 
 requirements:
@@ -58,7 +58,7 @@ about:
 extra:
   recipe-maintainers:
     - fangohr
-    - mb1a15
+    - marijanbeg
     - takluyver
     - davidcortesortuno
     - rpep
