@@ -13,7 +13,7 @@ source:
 
 build:
   skip: True  # [py27]
-  number: 0
+  number: 1
   script: pip install --no-deps .
 
 requirements:
@@ -37,7 +37,7 @@ test:
     - discretisedfield.mesh
 
   commands:
-    - python -c "import discretisedfield; discretisedfield.test()"
+    - python -c "import sys; import discretisedfield as m; sys.exit(m.test())"
 
 about:
   home: http://joommf.github.io/
