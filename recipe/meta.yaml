@@ -23,7 +23,7 @@ requirements:
 
   run:
     - python
-    - numpy  >=1.11 
+    - numpy  >=1.11
     - matplotlib
     - pyvtk
     - joommfutil
@@ -35,9 +35,9 @@ test:
     - discretisedfield
     - discretisedfield.util
     - discretisedfield.mesh
-    
+
   commands:
-    - python -c "import discretisedfield; discretisedfield.test()"
+    - python -c "import sys; import discretisedfield as m; sys.exit(m.test())"
 
 about:
   home: http://joommf.github.io/
