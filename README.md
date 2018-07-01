@@ -19,14 +19,16 @@ and http://joommf.github.io).
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/discretisedfield-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/discretisedfield-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/discretisedfield-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/discretisedfield-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/discretisedfield-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/discretisedfield-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/discretisedfield-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/discretisedfield-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/discretisedfield-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/discretisedfield-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/discretisedfield-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/discretisedfield-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/discretisedfield/badges/version.svg)](https://anaconda.org/conda-forge/discretisedfield)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/discretisedfield/badges/downloads.svg)](https://anaconda.org/conda-forge/discretisedfield)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-discretisedfield-green.svg)](https://anaconda.org/conda-forge/discretisedfield) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/discretisedfield.svg)](https://anaconda.org/conda-forge/discretisedfield) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/discretisedfield.svg)](https://anaconda.org/conda-forge/discretisedfield) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/discretisedfield.svg)](https://anaconda.org/conda-forge/discretisedfield) |
 
 Installing discretisedfield
 ===========================
