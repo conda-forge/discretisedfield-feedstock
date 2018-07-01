@@ -37,7 +37,7 @@ test:
     - discretisedfield.mesh
     
   commands:
-    - python -c "import discretisedfield; discretisedfield.test()"
+    - python -c "import sys; import discretisedfield as m; sys.exit(m.test())"
 
 about:
   home: http://joommf.github.io/
