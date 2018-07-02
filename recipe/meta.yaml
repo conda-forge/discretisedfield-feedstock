@@ -1,6 +1,6 @@
-{% set version = "0.8" %}
+{% set version = "0.8.1" %}
 {% set name = "discretisedfield" %}
-{% set sha256 = "8b6d27b702722c723792f5aeddc5d4778973e84bdf44febdb016fe47199f5e80" %}
+{% set sha256 = "8789ddadc2eb454b1bc344fffe2372bab71a2d1400a1152b22e97412c91398fc" %}
 
 package:
   name: {{ name | lower }}
@@ -37,7 +37,7 @@ test:
     - discretisedfield.mesh
     
   commands:
-    - python -c "import discretisedfield; discretisedfield.test()"
+    - python -c "import sys; import discretisedfield as m; sys.exit(m.test())"
 
 about:
   home: http://joommf.github.io/
