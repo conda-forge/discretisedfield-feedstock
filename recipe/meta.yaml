@@ -28,7 +28,6 @@ requirements:
     - pyvtk
     - joommfutil
     - pytest
-    - hypothesis
 
 test:
   imports:
