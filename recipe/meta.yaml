@@ -1,6 +1,6 @@
-{% set version = "0.8.3" %}
+{% set version = "0.8.5" %}
 {% set name = "discretisedfield" %}
-{% set sha256 = "42f2fa88b72e29ca30d8c5112a3c10cc2dcbda57d95014242e42f5ad277d098f" %}
+{% set sha256 = "0dfd7d2714f6a00a715fb5c797b11f63437665784b35cb27a6c92a790eb4c050" %}
 
 package:
   name: {{ name | lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: pip install --no-deps .
 
 requirements:
