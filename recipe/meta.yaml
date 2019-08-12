@@ -26,6 +26,7 @@ requirements:
     - matplotlib
     - pyvtk
     - ubermagutil
+    - k3d
     - pytest
 
 test:
