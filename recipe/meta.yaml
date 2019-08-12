@@ -42,7 +42,7 @@ about:
   license: BSD-3-clause
   license_family: BSD
   license_file: LICENSE
-  summary: Python package for defining, reading, analysis, and plotting of finite difference fields.
+  summary: Python package for definition, reading, and visualisation of finite difference fields.
   doc_url: http://discretisedfield.readthedocs.io
   dev_url: https://github.com/ubermag/discretisedfield
 
