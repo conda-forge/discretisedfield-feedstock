@@ -1,20 +1,19 @@
-{% set version = "0.8.3" %}
+{% set version = "0.8.5" %}
 {% set name = "discretisedfield" %}
-{% set sha256 = "42f2fa88b72e29ca30d8c5112a3c10cc2dcbda57d95014242e42f5ad277d098f" %}
+{% set sha256 = "0dfd7d2714f6a00a715fb5c797b11f63437665784b35cb27a6c92a790eb4c050" %}
 
 package:
   name: {{ name | lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 1
-  script: pip install --no-deps .
+  number: 0
+  script: pip install --no-deps . -vvv
 
 requirements:
   build:
@@ -23,36 +22,37 @@ requirements:
 
   run:
     - python >=3.6
-    - numpy  >=1.11 
+    - numpy 
     - matplotlib
     - pyvtk
-    - joommfutil
+    - ubermagutil
+    - k3d
     - pytest
 
 test:
   imports:
     - discretisedfield
     - discretisedfield.util
-    - discretisedfield.mesh
-    
   commands:
     - python -c "import sys; import discretisedfield as m; sys.exit(m.test())"
 
 about:
-  home: http://joommf.github.io/
-  license: BSD 3-clause
+  home: http://ubermag.github.io/
+  license: BSD-3-clause
   license_family: BSD
   license_file: LICENSE
-  summary: Reading and analysing OOMMF odt files
+  summary: Python package for definition, reading, and visualisation of finite difference fields.
   doc_url: http://discretisedfield.readthedocs.io
-  dev_url: https://github.com/joommf/discretisedfield
+  dev_url: https://github.com/ubermag/discretisedfield
 
   description: |
-    discretisedfield provides a class to represent (finite difference)
-    discretisation of a field (in the continuum field theory context).
+    This Python package provides:
 
-    It is part of the Jupyter-OOMMF project (https://github.com/joommf
-    and http://joommf.github.io).
+        - Definition of finite difference meshes and fields
+        - Reading and writing of different file types, such as `.ovf` and `.vtk`
+        - Visualisation of finite difference meshes and fields using `matplotlib` and `k3d`
+
+    It is available on all major operating systems (Windows, MacOS, Linux) and requires Python 3.6 or higher.
 
 extra:
   recipe-maintainers:
