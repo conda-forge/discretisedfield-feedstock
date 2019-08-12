@@ -33,7 +33,6 @@ test:
   imports:
     - discretisedfield
     - discretisedfield.util
-    
   commands:
     - python -c "import sys; import discretisedfield as m; sys.exit(m.test())"
 
