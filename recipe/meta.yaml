@@ -1,6 +1,6 @@
-{% set version = "0.8.5" %}
+{% set version = "0.8.6" %}
 {% set name = "discretisedfield" %}
-{% set sha256 = "0dfd7d2714f6a00a715fb5c797b11f63437665784b35cb27a6c92a790eb4c050" %}
+{% set sha256 = "975b8dec8c7fc4b84fe65149e10db8019c99a5a440832b26bac3b576390cceaf" %}
 
 package:
   name: {{ name | lower }}
