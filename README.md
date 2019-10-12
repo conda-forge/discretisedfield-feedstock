@@ -1,30 +1,35 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About discretisedfield
 ======================
 
-Home: http://joommf.github.io/
+Home: http://ubermag.github.io/
 
-Package license: BSD 3-clause
+Package license: BSD-3-clause
 
 Feedstock license: BSD 3-Clause
 
-Summary: Reading and analysing OOMMF odt files
+Summary: Python package for definition, reading, and visualisation of finite difference fields.
 
-discretisedfield provides a class to represent (finite difference)
-discretisation of a field (in the continuum field theory context).
+This Python package provides:
 
-It is part of the Jupyter-OOMMF project (https://github.com/joommf
-and http://joommf.github.io).
+    - Definition of finite difference meshes and fields
+    - Reading and writing of different file types, such as `.ovf` and `.vtk`
+    - Visualisation of finite difference meshes and fields using `matplotlib` and `k3d`
+
+It is available on all major operating systems (Windows, MacOS, Linux) and requires Python 3.6 or higher.
 
 
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/discretisedfield-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/discretisedfield-feedstock)
+
+<table><tr><td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=2862&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/discretisedfield-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
