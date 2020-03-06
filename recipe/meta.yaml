@@ -1,6 +1,6 @@
-{% set version = "0.8.7" %}
+{% set version = "0.8.9" %}
 {% set name = "discretisedfield" %}
-{% set sha256 = "99d349a52f5589c4986d5b09912b712113bc6decec25f8283015f18c7733f363" %}
+{% set sha256 = "c13767a1093779d4550c0ba2ccabb52d027a9fef937c538435a729c3c13c9c6e" %}
 
 package:
   name: {{ name | lower }}
@@ -22,42 +22,38 @@ requirements:
 
   run:
     - python >=3.6
-    - numpy 
-    - matplotlib-base
-    - pyvtk
     - ubermagutil
+    - matplotlib-base
+    - jupyterlab
+    - seaborn
+    - h5py
+    - pyvtk
     - k3d
-    - pytest
 
 test:
   imports:
     - discretisedfield
     - discretisedfield.util
   commands:
-    - python -c "import sys; import discretisedfield as m; sys.exit(m.test())"
+    - python -c "import sys; import discretisedfield as df; sys.exit(df.test())"
 
 about:
   home: http://ubermag.github.io/
   license: BSD-3-clause
   license_family: BSD
   license_file: LICENSE
-  summary: Python package for definition, reading, and visualisation of finite difference fields.
+  summary: Python package for the analysis and visualisation of finite difference fields.
   doc_url: http://discretisedfield.readthedocs.io
   dev_url: https://github.com/ubermag/discretisedfield
 
   description: |
-    This Python package provides:
-
-        - Definition of finite difference meshes and fields
-        - Reading and writing of different file types, such as `.ovf` and `.vtk`
-        - Visualisation of finite difference meshes and fields using `matplotlib` and `k3d`
-
-    It is available on all major operating systems (Windows, MacOS, Linux) and requires Python 3.6 or higher.
+    `discretisedfield` is a Python package that provides:
+      - definition of finite difference regions, meshes, and fields,
+      - analysis of finite difference fields,
+      - reading and writing of different file types (OVF, VTK, and HDF5), and
+      - visualisation using matplotlib and k3d.
 
 extra:
   recipe-maintainers:
-    - fangohr
     - marijanbeg
-    - takluyver
-    - davidcortesortuno
-    - rpep
+    - fangohr
