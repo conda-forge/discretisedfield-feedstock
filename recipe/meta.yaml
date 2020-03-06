@@ -1,9 +1,9 @@
-{% set version = "0.8.10" %}
 {% set name = "discretisedfield" %}
+{% set version = "0.8.10" %}
 {% set sha256 = "803c195165a51e45de1da0b47239f8b526605761f711f5b21e6026bcb715e737" %}
 
 package:
-  name: {{ name | lower }}
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
@@ -13,13 +13,12 @@ source:
 build:
   noarch: python
   number: 0
-  script: pip install --no-deps . -vvv
+  script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
     - python >=3.6
     - pip
-
   run:
     - python >=3.6
     - ubermagutil
@@ -33,7 +32,6 @@ requirements:
 test:
   imports:
     - discretisedfield
-    - discretisedfield.util
   commands:
     - python -c "import sys; import discretisedfield as df; sys.exit(df.test())"
 
@@ -42,16 +40,9 @@ about:
   license: BSD-3-clause
   license_family: BSD
   license_file: LICENSE
-  summary: Python package for the analysis and visualisation of finite difference fields.
+  summary: 'Python package for the analysis and visualisation of finite difference fields.'
   doc_url: http://discretisedfield.readthedocs.io
   dev_url: https://github.com/ubermag/discretisedfield
-
-  description: |
-    `discretisedfield` is a Python package that provides:
-      - definition of finite difference regions, meshes, and fields,
-      - analysis of finite difference fields,
-      - reading and writing of different file types (OVF, VTK, and HDF5), and
-      - visualisation using matplotlib and k3d.
 
 extra:
   recipe-maintainers:
