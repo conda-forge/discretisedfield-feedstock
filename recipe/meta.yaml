@@ -26,7 +26,6 @@ requirements:
     - jupyterlab
     - seaborn
     - h5py
-    - pyvtk
     - k3d
 
 test:
