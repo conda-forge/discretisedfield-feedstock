@@ -1,6 +1,6 @@
 {% set name = "discretisedfield" %}
-{% set version = "0.8.10" %}
-{% set sha256 = "803c195165a51e45de1da0b47239f8b526605761f711f5b21e6026bcb715e737" %}
+{% set version = "0.8.12" %}
+{% set sha256 = "6a5a56297b0121e28a28400e30877c3232178ef3810d859564077ccbb85b80dc" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -40,7 +40,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Python package for the analysis and visualisation of finite difference fields.'
+  summary: Python package for the analysis and visualisation of finite difference fields.
   doc_url: http://discretisedfield.readthedocs.io
   dev_url: https://github.com/ubermag/discretisedfield
 
