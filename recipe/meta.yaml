@@ -23,6 +23,7 @@ requirements:
     - python >=3.6
     - ubermagutil ==0.2.6
     - matplotlib-base >=3.2
+    - pandas >=1.0
     - jupyterlab >=2.1
     - h5py >=2.10
     - k3d >=2.8
