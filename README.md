@@ -5,11 +5,13 @@ Home: http://ubermag.github.io/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/discretisedfield-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python package for the analysis and visualisation of finite difference fields.
 
+Development: https://github.com/ubermag/discretisedfield
 
+Documentation: http://discretisedfield.readthedocs.io
 
 Current build status
 ====================
