@@ -22,10 +22,10 @@ requirements:
     - python >=3.8
     - ubermagutil ==0.2.7
     - matplotlib-base >=3.3
-    - pandas >=1.2
+    - pandas
     - jupyterlab ==2.2
-    - h5py >=3.1
-    - k3d >=2.9
+    - h5py
+    - k3d ==2.9
 
 test:
   imports:
