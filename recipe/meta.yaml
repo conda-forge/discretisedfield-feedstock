@@ -1,6 +1,6 @@
 {% set name = "discretisedfield" %}
-{% set version = "0.8.13" %}
-{% set sha256 = "3a523f97cbe157247ae1e1176f3b4503259555c511c07d0ea7a7aaad3eaf9d66" %}
+{% set version = "0.8.15" %}
+{% set sha256 = "641e4159b6c252dfd9f6de7091e9462681f9b3d378dba30f663f46924fdb997b" %}
 
 package:
   name: {{ name|lower }}
@@ -16,7 +16,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python >=3.6
     - pip
   run:
