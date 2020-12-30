@@ -1,6 +1,5 @@
 {% set name = "discretisedfield" %}
 {% set version = "0.8.15" %}
-{% set sha256 = "641e4159b6c252dfd9f6de7091e9462681f9b3d378dba30f663f46924fdb997b" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: 641e4159b6c252dfd9f6de7091e9462681f9b3d378dba30f663f46924fdb997b
 
 build:
   noarch: python
@@ -17,16 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - pip
   run:
-    - python >=3.6
-    - ubermagutil ==0.2.6
-    - matplotlib-base >=3.2
-    - pandas >=1.0
-    - jupyterlab >=2.1
-    - h5py >=2.10
-    - k3d >=2.8
+    - python >=3.8
+    - ubermagutil ==0.2.7
+    - matplotlib-base >=3.3
+    - jupyterlab ==2.2
+    - k3d ==2.9
+    - pandas
+    - h5py
 
 test:
   imports:
@@ -47,3 +46,4 @@ extra:
   recipe-maintainers:
     - marijanbeg
     - fangohr
+    - lang-m
