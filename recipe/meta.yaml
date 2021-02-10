@@ -1,5 +1,5 @@
 {% set name = "discretisedfield" %}
-{% set version = "0.11" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4bac00ce55fde5beaa0dd064d692b9e39cdd29fd297d30666be385182dc65290
+  sha256: b5806dbe601fb16b025847e903cd8d2d3ef8e7c00b5a0074e68048938a428f89
 
 build:
   noarch: python
@@ -20,12 +20,13 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - ubermagutil ==0.4
+    - ubermagutil ==0.4.1
     - matplotlib-base >=3.3
     - jupyterlab ==2.2
     - k3d ==2.9
     - pandas >=1.1
     - h5py
+    - scipy >=1.5
 
 test:
   imports:
