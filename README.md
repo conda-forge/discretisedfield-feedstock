@@ -11,7 +11,7 @@ Summary: Python package for the analysis and visualisation of finite difference 
 
 Development: https://github.com/ubermag/discretisedfield
 
-Documentation: http://discretisedfield.readthedocs.io
+Documentation: https://ubermag.github.io/documentation/discretisedfield.html
 
 Current build status
 ====================
@@ -122,4 +122,5 @@ Feedstock Maintainers
 * [@fangohr](https://github.com/fangohr/)
 * [@lang-m](https://github.com/lang-m/)
 * [@marijanbeg](https://github.com/marijanbeg/)
+* [@samjrholt](https://github.com/samjrholt/)
 
