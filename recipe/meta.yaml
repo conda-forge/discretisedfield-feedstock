@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - ubermagutil >=0.62.0
+    - ubermagutil >=0.63.0
     - matplotlib-base >=3.3
     - jupyterlab >=3.0,<4
     - k3d >=2.11
@@ -30,6 +30,7 @@ requirements:
     - scipy >=1.6
     - vtk
     - xarray
+    - hvplot
 
 test:
   imports:
