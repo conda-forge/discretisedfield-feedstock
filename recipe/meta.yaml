@@ -8,6 +8,8 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
   sha256: e09bf7ff7fb424802c784f7d37dbcd811ecabefdec2c17e391b51ac0e9e0bfe9
+  patches:
+    - numerical-accuracy-in-tests.patch
 
 build:
   noarch: python
