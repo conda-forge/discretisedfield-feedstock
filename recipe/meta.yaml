@@ -1,5 +1,5 @@
 {% set name = "discretisedfield" %}
-{% set version = "0.65.0" %}
+{% set version = "0.65.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: ee78a049672371289c7bc45f7959819923e10412fb585fc567c8503c0daea5ea
+  sha256: e09bf7ff7fb424802c784f7d37dbcd811ecabefdec2c17e391b51ac0e9e0bfe9
 
 build:
   noarch: python
