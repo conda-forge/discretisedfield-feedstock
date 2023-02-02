@@ -1,0 +1,20 @@
+--- a/discretisedfield/tests/test_field.py
++++ b/discretisedfield/tests/test_field.py
+@@ -791,7 +791,7 @@ class TestField:
+         res = f / 2
+         assert res.average == 2.5
+         res = 10 / f
+-        assert res.average == 2
++        assert np.allclose(res.average, 2)
+         res = (5, 10, 15) / f
+         assert res.average == (1, 2, 3)
+         f *= 10
+@@ -931,7 +931,7 @@ class TestField:
+         assert (f1 @ f2)((5, 7, 1)) == 47
+ 
+         # Check norm computed using dot product
+-        assert f1.norm == (f1 @ f1) ** (0.5)
++        assert f1.norm.allclose((f1 @ f1) ** (0.5))
+ 
+         # Exceptions
+         f1 = df.Field(mesh, dim=1, value=1.2)
