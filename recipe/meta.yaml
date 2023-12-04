@@ -11,7 +11,9 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
+  entry_points:
+    - ovf2vtk = discretisedfield.io.ovf2vtk:ovf2vtk
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -36,6 +38,7 @@ test:
   imports:
     - discretisedfield
   commands:
+    - ovf2vtk -h
     - python -c "import sys; import discretisedfield as df; sys.exit(df.test())"
 
 about:
