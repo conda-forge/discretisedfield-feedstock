@@ -1,5 +1,5 @@
 {% set name = "discretisedfield" %}
-{% set version = "0.90.1" %}
+{% set version = "0.91.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: 75ba890edb4fd5adbb8f2944cdc93e2443475a7eaf16ed9249f08a96ddfc7e7d
+  sha256: 895a1efa4045a6973ef2a1a326dec4db2aa6a40b52d3af4927cc2f2f3541450b
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - ovf2vtk = discretisedfield.io.ovf2vtk:ovf2vtk
   script: {{ PYTHON }} -m pip install . -vv
