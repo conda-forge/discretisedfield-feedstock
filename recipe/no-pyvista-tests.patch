@@ -1,0 +1,104 @@
+diff --git a/discretisedfield/tests/test_field.py b/discretisedfield/tests/test_field.py
+index b475cdc..ed85ac3 100644
+--- a/discretisedfield/tests/test_field.py
++++ b/discretisedfield/tests/test_field.py
+@@ -3940,6 +3940,7 @@ def test_plot_large_sample():
+     field.k3d.vector()
+ 
+ 
++@pytest.mark.skip
+ def test_pyvista_vector(test_field):
+     # Default
+     test_field.pyvista.vector()
+@@ -3977,6 +3978,7 @@ def test_pyvista_vector(test_field):
+         test_field.pyvista.vector(color_field=test_field)
+ 
+ 
++@pytest.mark.skip
+ def test_pyvista_scalar(test_field):
+     # Default
+     test_field.a.pyvista.scalar()
+@@ -3996,6 +3998,7 @@ def test_pyvista_scalar(test_field):
+     plotter.show()
+ 
+ 
++@pytest.mark.skip
+ def test_pyvista_volume(test_field):
+     # Default
+     test_field.c.pyvista.volume()
+@@ -4015,6 +4018,7 @@ def test_pyvista_volume(test_field):
+     plotter.show()
+ 
+ 
++@pytest.mark.skip
+ def test_pyvista_valid(test_field):
+     # Default
+     test_field.pyvista.valid()
+@@ -4037,6 +4041,7 @@ def test_pyvista_valid(test_field):
+ @pytest.mark.skipif(
+     sys.platform != "linux", reason="Segmentation fault on Mac and Windows."
+ )
++@pytest.mark.skip
+ def test_pyvista_contour(test_field):
+     # Default
+     test_field.pyvista.contour()
+@@ -4072,6 +4077,7 @@ def test_pyvista_contour(test_field):
+ @pytest.mark.skipif(
+     sys.platform != "linux", reason="Segmentation fault on Mac and Windows."
+ )
++@pytest.mark.skip
+ def test_pyvista_streamlines(test_field):
+     # Default
+     test_field.pyvista.streamlines()
+diff --git a/discretisedfield/tests/test_mesh.py b/discretisedfield/tests/test_mesh.py
+index 196b6e0..d01c9bd 100644
+--- a/discretisedfield/tests/test_mesh.py
++++ b/discretisedfield/tests/test_mesh.py
+@@ -1337,6 +1337,7 @@ def test_k3d_mpl_subregions(tmp_path):
+     mesh.k3d.subregions()
+ 
+ 
++@pytest.mark.skip
+ def test_pyvista(valid_mesh):
+     if valid_mesh.region.ndim != 3:
+         with pytest.raises(RuntimeError):
+@@ -1345,6 +1346,7 @@ def test_pyvista(valid_mesh):
+         valid_mesh.pyvista()
+ 
+ 
++@pytest.mark.skip
+ def test_pyvista_subregions(tmp_path):
+     p1 = (0, 0, 0)
+     p2 = (100, 80, 10)
+diff --git a/discretisedfield/tests/test_plotting.py b/discretisedfield/tests/test_plotting.py
+index f36a169..0817c2e 100644
+--- a/discretisedfield/tests/test_plotting.py
++++ b/discretisedfield/tests/test_plotting.py
+@@ -22,6 +22,7 @@ def test_inplane_angle():
+ 
+ 
+ @pytest.mark.parametrize("extension", ["png", "jpeg", "jpg", "bmp", "tif", "tiff"])
++@pytest.mark.skip
+ def test_pyvista_valid_filename_extensions_screenshot(extension):
+     pv.OFF_SCREEN = True
+ 
+@@ -44,6 +45,7 @@ def test_pyvista_valid_filename_extensions_screenshot(extension):
+ # xfail as need on screen to create graphics. TODO: check how pyvista test this
+ @pytest.mark.xfail(strict=True)
+ @pytest.mark.parametrize("extension", ["svg", "eps", "ps", "pdf", "txt"])
++@pytest.mark.skip
+ def test_pyvista_valid_filename_extensions_save_graphic(extension):
+     pv.OFF_SCREEN = True
+ 
+diff --git a/discretisedfield/tests/test_region.py b/discretisedfield/tests/test_region.py
+index 67755a3..3a87d18 100644
+--- a/discretisedfield/tests/test_region.py
++++ b/discretisedfield/tests/test_region.py
+@@ -924,6 +924,7 @@ def test_k3d(p1, p2):
+     "p1, p2",
+     [[0, 1], [(0, 0), (1, 1)], [(0, 0, 0), (1, 1, 1)], [(0, 0, 0, 0), (1, 1, 1, 1)]],
+ )
++@pytest.mark.skip
+ def test_pyvista(p1, p2):
+     region = df.Region(p1=p1, p2=p2)
+     if region.ndim != 3:
