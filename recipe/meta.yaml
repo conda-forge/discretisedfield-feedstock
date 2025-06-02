@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
   sha256: c540ff2c68bf24555fbaca64cadc1d383f447f6510740aac400c887cb7526588
-  patches:
-    - no-pyvista-tests.patch
 
 build:
   noarch: python
@@ -21,10 +19,11 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pip
   run:
     - python >={{ python_min }}
-    - ubermagutil >=0.63.4
+    - ubermagutil >=0.64.0
     - matplotlib-base >=3.3, !=3.7.2
     - k3d >=2.11
     - pandas >=1.1
