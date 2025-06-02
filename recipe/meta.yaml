@@ -1,5 +1,5 @@
 {% set name = "discretisedfield" %}
-{% set version = "0.91.0" %}
+{% set version = "0.92.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: 895a1efa4045a6973ef2a1a326dec4db2aa6a40b52d3af4927cc2f2f3541450b
-  patches:
-    - no-pyvista-tests.patch
+  sha256: c540ff2c68bf24555fbaca64cadc1d383f447f6510740aac400c887cb7526588
 
 build:
   noarch: python
-  number: 1
+  number: 0
   entry_points:
     - ovf2vtk = discretisedfield.io.ovf2vtk:ovf2vtk
   script: {{ PYTHON }} -m pip install . -vv
@@ -21,10 +19,11 @@ build:
 requirements:
   host:
     - python {{ python_min }}
+    - setuptools
     - pip
   run:
     - python >={{ python_min }}
-    - ubermagutil >=0.63.4
+    - ubermagutil >=0.64.0
     - matplotlib-base >=3.3, !=3.7.2
     - k3d >=2.11
     - pandas >=1.1
@@ -44,7 +43,7 @@ test:
     - discretisedfield
   commands:
     - ovf2vtk -h
-    - python -c "import sys; import discretisedfield as df; sys.exit(df.test())"
+    - pytest -v -m "not pyvista" $(python -c "from pathlib import Path; import discretisedfield.tests; print(Path(discretisedfield.tests.__file__).parent)")
 
 about:
   home: http://ubermag.github.io/
