@@ -43,7 +43,7 @@ test:
     - discretisedfield
   commands:
     - ovf2vtk -h
-    - python -c "import sys; import discretisedfield as df; sys.exit(df.test())"
+    - pytest -v -m "not pyvista" $(python -c "from pathlib import Path; import discretisedfield.tests; print(Path(discretisedfield.tests.__file__).parent)")
 
 about:
   home: http://ubermag.github.io/
